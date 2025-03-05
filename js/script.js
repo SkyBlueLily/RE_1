@@ -72,6 +72,13 @@ $(document).ready(function () {
 
     offcanvasMenuItems.forEach((item, index) => {
         item.addEventListener("click", function() {
+            if (background.style.transform === "translateY(0px)") {
+                time = 0;
+            } else {
+                time = 500;
+            }
+            // 3. 클릭 시 배경이 0px 부분으로 이동
+            background.style.transform = "translateY(0px)";
             // 페이지 전환
             openPage(pages, index + 1, 0);
             // offcanvas 닫기
