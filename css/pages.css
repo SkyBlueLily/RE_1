@@ -1,0 +1,353 @@
+/* common */
+.align_center {
+    text-align: center;
+}
+
+.align_left {
+    text-align: left;
+}
+
+.subtitle_under_gap {
+    height: 20px;
+}
+
+.pharagraph {
+    width : 900px;
+    margin: 0 auto;
+    line-height: normal;
+}
+
+.pharagraph_2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pharagraph_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-content: space-around center;
+    grid-gap: 20px;
+}
+
+.pharagraph_mid_gap {
+    height : 50px;
+}
+
+.pharagraph_gap {
+    height: 100px;
+}
+
+.bottom_gap {
+    height: 50px;
+}
+
+.img_radius {
+    border-radius: 20px;
+}
+
+.third_title {
+    font-size : 22px;
+    font-weight: 500;
+
+    text-decoration: underline;
+    text-decoration-color:#333;
+    text-underline-offset: 10px; 
+    text-decoration-thickness: 3.1px; 
+}
+
+.pharagraph_2 .explain .title {
+    font-size : 22px;
+    font-weight: 450;
+}
+
+.pharagraph_2 .explain .text {
+    font-size : 16px;
+}
+
+.img_0, .img_1, .img_2, .img_3, .img_4 {
+    box-shadow: 0 0 13px 3px #5b84a5;
+    z-index:-1;
+}
+
+
+
+
+
+
+
+
+/* pages */
+.pages {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+/* 콘텐츠 페이드 전환 */
+.pages .each_page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto; /* 각 페이지 내용 스크롤 */
+    -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 (모바일용) */
+    padding: 30px; /* 내용물 여백 */
+    box-sizing: border-box;
+}
+
+.pages .each_page.active {
+    display: block;
+}
+
+.main_page .top_text {
+    position : relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    gap : 10px;
+}
+
+.main_page .top_text .line_t_l {
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: black;
+    flex-basis: 500px;
+}
+
+.main_page .top_text .line_t_r {
+    color: #3d3d3d;
+    font-weight: 500;
+    flex-basis: 340px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.main_page .top_text .line_t_r .button_r {
+    display: block;
+    width: max-content;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+/* 호버 시 색상 변화 */
+.main_page .top_text .line_t_r .button_r:hover {
+    background-color: #333333;
+}
+
+.pages .sub_page {
+    position: absolute;
+    color: black;
+}
+
+.pages .pages_1,
+.pages .pages_2,
+.pages .pages_3,
+.pages .pages_4 {
+    font-size: 17px;
+}
+
+.img_0 {
+    flex-shrink: 0;
+    width: 300px;    
+}
+
+.explain {
+    flex: 1;
+}
+
+/* 연혁 */
+.list_right {
+    display: table;
+    width: 1100px;
+    table-layout: fixed;
+}
+
+.list_right span {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.list_right div {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.list_right div:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #dfdfdf;
+}
+
+.list_right div ul {
+    margin-top: 20px;
+}
+
+.list_right div ul li {
+    display: table;
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.list_right div ul li+li {
+    margin-top: 20px;
+}
+
+.list_right div ul li:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #032757;
+    border-radius: 50%;
+}
+
+.list_right dl {
+    text-align: left;
+    display: table;
+    width: 100%;
+}
+
+.list_right dl dt {
+    width: 10%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    text-align: left;
+}
+
+.list_right dl dd {
+    width: 90px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #313131;
+    text-align: left;
+}
+/* 연혁 */
+
+.pages_2 .subtitle_under_gap {
+    height: 24px;
+}
+
+.pages_2 .container {
+    justify-content: center;
+    gap : 40px;
+}
+.pages_2 .pharagraph_2 .card {
+    position: relative;
+    width: 260px;
+    text-align: center;
+    flex-basis: 260px;
+    font-family: "Signika Negative", serif;
+}
+
+.pages_2 .pharagraph_2 .shadow1:before, 
+.pages_2 .pharagraph_2 .shadow1:after {
+    position:absolute;
+    content:"";
+    bottom:12px;left:15px;top:80%;
+    width:45%;
+    background:#2a3c4b;
+    z-index:-1;
+    -webkit-box-shadow: 0 20px 15px #2a3c4b;
+    -moz-box-shadow: 0 20px 15px #2a3c4b;
+    box-shadow: 0 20px 15px #2a3c4b;
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+}
+
+.pages_2 .pharagraph_2 .shadow1:after {
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    transform: rotate(6deg);
+    right: 15px;left: auto;
+}
+
+.pages_2 .pharagraph_2 .card-bg {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: linear-gradient(#2568f7, rgb(228, 233, 245));
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.pages_2 .pharagraph_2 .card-img {
+    width: 100%;
+    border-radius: 0px;
+    z-index: 3;
+    position: relative;
+    width : 260px;
+    height : 260px;
+
+    box-shadow: 0 7px 8px #525151;
+}
+
+.pages_2 .pharagraph_2 .card-title {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    z-index: 3;
+    position: relative;
+    height : 35px;
+}
+
+.pages_2 .pharagraph_2 .card-desc {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #333;
+    z-index: 3;
+    position: relative;
+    height : 120px;
+}
+
+.pages_3 .pharagraph_2 .left_side {
+    flex-basis: 300px;
+}
+
+.pages_3 .pharagraph_2 .img_0 {
+    box-shadow: 0 0 3px 3px #5b84a5;
+    height: 170px;
+}
+
+.pages_3 .pharagraph_2 .img_1 {
+    box-shadow: 0 0 3px 3px #5b84a5;
+    width: 250px;
+    margin-left: 25px;
+}
+
+.pages_4 .pharagraph_2 .icon {
+    width : 50px;
+    height : 50px;
+}
